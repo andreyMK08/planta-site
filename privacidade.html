@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Saiba quais dados o Planta guarda no celular, como o backup opcional usa sua conta Google Drive e como excluir cópias ou revogar o acesso.">
+    <meta name="theme-color" content="#184f3b">
+    <title>Política de Privacidade — Planta</title>
+    <link rel="icon" href="assets/planta.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <header class="site-header container">
+      <a class="brand" href="./" aria-label="Planta, página inicial"><img src="assets/planta.png" width="44" height="44" alt=""><span>planta<span class="brand-dot">.</span></span></a>
+      <nav aria-label="Navegação principal"><a href="./">O aplicativo</a><a href="privacidade.html" aria-current="page">Privacidade</a><a class="nav-contact" href="mailto:andreykoshimizo@gmail.com">Contato <span aria-hidden="true">↗</span></a></nav>
+    </header>
+
+    <main id="conteudo" class="container privacy-layout">
+      <div class="privacy-title">
+        <p class="eyebrow">Transparência no cuidado</p>
+        <h1>Política de<br><em>Privacidade.</em></h1>
+        <p class="policy-date">Última atualização: <time datetime="2026-10-21">21 de outubro de 2026</time></p>
+        <p>Esta política descreve o aplicativo Planta para Android e estas páginas de apresentação. O responsável pelo projeto é Andrey, com contato em <a href="mailto:andreykoshimizo@gmail.com">andreykoshimizo@gmail.com</a>.</p>
+        <nav class="policy-nav" aria-label="Nesta política">
+          <a href="#dados">01 · Dados e finalidades</a><a href="#google-drive">02 · Conta Google e Drive</a><a href="#armazenamento">03 · Armazenamento e segurança</a><a href="#controle">04 · Exclusão e controle</a><a href="#site">05 · Este site</a><a href="#contato">06 · Contato e alterações</a>
+        </nav>
+      </div>
+
+      <div class="policy-content">
+        <aside class="policy-summary" aria-label="Visão geral"><p class="eyebrow">O essencial</p><p>Seus registros são guardados no celular. O backup no Google Drive é opcional e usa a conta que você autorizar. O Planta não recebe sua senha Google e não mantém um servidor próprio de backups.</p></aside>
+
+        <section id="dados" aria-labelledby="dados-titulo">
+          <span class="section-number">01</span><h2 id="dados-titulo">Dados utilizados e suas finalidades</h2>
+          <p>O Planta utiliza os dados fornecidos por você para organizar sua coleção e permitir o uso das funções do aplicativo:</p>
+          <ul>
+            <li><strong>Cadastro local:</strong> nome, e-mail, telefone e foto de perfil, quando informada. Esses dados identificam sua conta dentro do aplicativo e permitem os fluxos locais de login e recuperação de senha.</li>
+            <li><strong>Plantas e cuidados:</strong> nomes, tipos, fotos, locais cadastrados, etiquetas, observações, datas, regras, tarefas e registros de cuidados e crescimento. São usados para apresentar sua coleção, agenda e histórico.</li>
+            <li><strong>Preferências:</strong> tema, configurações de lembretes e de backup. São utilizadas para aplicar as opções que você escolheu.</li>
+            <li><strong>Histórico de backup:</strong> nome do arquivo, destino, tamanho, horários e resultado das operações, para indicar se uma cópia foi concluída ou falhou.</li>
+          </ul>
+          <p>Os locais são ambientes cadastrados por você, como uma varanda ou um cômodo; essa função não utiliza localização por GPS. Os lembretes usam as notificações do aparelho, conforme as permissões concedidas no Android.</p>
+        </section>
+
+        <section id="google-drive" aria-labelledby="drive-titulo">
+          <span class="section-number">02</span><h2 id="drive-titulo">Conexão com o Google e backup no Drive</h2>
+          <p>A conexão é opcional e é iniciada por você nas configurações do Planta. O Google autentica sua conta e solicita seu consentimento. O Planta utiliza o e-mail e o identificador da conta Google para identificar o destino autorizado e solicitar a autorização dos próximos envios.</p>
+          <p>O acesso solicitado é <code>https://www.googleapis.com/auth/drive.file</code>, destinado aos arquivos criados pelo aplicativo ou disponibilizados a ele. O Planta usa esse acesso para encontrar ou criar a pasta <strong>Planta - Backups</strong> e enviar novas cópias. A implementação não solicita acesso geral a todos os arquivos do seu Drive.</p>
+          <p>O arquivo de backup <code>.planta</code> inclui dados do cadastro, configurações, plantas, fotos disponíveis, locais, tipos, etiquetas, regras, tarefas, observações, cuidados e crescimento. A senha do aplicativo e seu hash são removidos do conteúdo exportado. O Planta não recebe nem guarda a senha da sua conta Google.</p>
+          <p>O envio ocorre diretamente do aparelho para as APIs do Google por HTTPS, sem um servidor de backups do responsável pelo Planta. O aplicativo usa tokens de acesso durante a operação; não os grava por conta própria. Os serviços do Google gerenciam a autorização e podem solicitar uma nova conexão.</p>
+          <p>Ao ativar o backup diário, o Android agenda os envios para quando houver rede sem cobrança, normalmente Wi-Fi, bateria e armazenamento disponíveis. O sistema pode adiar o trabalho. O envio manual pode utilizar a conexão disponível, inclusive dados móveis.</p>
+          <p>O Planta não vende dados pessoais, não utiliza os dados obtidos do Google para publicidade ou treinamento de modelos de inteligência artificial e não oferece ao responsável acesso automático ao conteúdo do seu Drive. O uso de informações recebidas das APIs do Google segue a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+          <p>O processamento e armazenamento feitos pelo Google também estão sujeitos à <a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a>. O compartilhamento das cópias depende das configurações da sua conta no Drive; o Planta não cria compartilhamentos públicos nem altera permissões de compartilhamento.</p>
+        </section>
+
+        <section id="armazenamento" aria-labelledby="armazenamento-titulo">
+          <span class="section-number">03</span><h2 id="armazenamento-titulo">Armazenamento, retenção e segurança</h2>
+          <p>O banco de dados e as fotos do aplicativo são armazenados no aparelho. A senha local é armazenada como hash bcrypt. Os dados de sessão e as preferências de conexão com o Drive usam o armazenamento seguro disponibilizado ao aplicativo.</p>
+          <p>Os dados locais permanecem até que você os exclua pelas funções disponíveis ou remova os dados do aplicativo nas configurações do Android. Arquivos exportados para outras pastas do aparelho são gerenciados separadamente.</p>
+          <p>Cada envio ao Drive cria uma nova cópia. O Planta não apaga automaticamente as versões anteriores: elas permanecem na sua conta e ocupam espaço até você removê-las. Desativar o backup, desconectar a autorização ou desinstalar o app não apaga as cópias já existentes no Drive.</p>
+          <p>Arquivos temporários são utilizados para montar e ler backups. O aplicativo procura removê-los ao concluir ou falhar a operação; uma interrupção pelo sistema pode impedir a limpeza imediata.</p>
+          <p>O formato <code>.planta</code> é um arquivo compactado e não acrescenta criptografia própria ao conteúdo exportado. Quem tiver acesso a uma cópia pode ler seus dados. Proteja o aparelho, a conta Google e os arquivos que você compartilhar. As medidas descritas não representam garantia absoluta contra perda ou acesso indevido.</p>
+          <p>Se você cadastrar fotos por endereço de internet, o carregamento dessas imagens poderá contatar o servidor de origem, que pode receber dados técnicos da conexão.</p>
+        </section>
+
+        <section id="controle" aria-labelledby="controle-titulo">
+          <span class="section-number">04</span><h2 id="controle-titulo">Como controlar e excluir seus dados</h2>
+          <ul>
+            <li><strong>Interromper novos backups:</strong> desative “Backup diário automático” nas configurações do Planta. O botão de envio manual continua disponível quando a conta está configurada.</li>
+            <li><strong>Revogar a autorização:</strong> acesse as <a href="https://myaccount.google.com/connections">conexões de terceiros da sua Conta Google</a> e remova o acesso do Planta. Isso interrompe os novos acessos autorizados, mas não exclui os arquivos já enviados.</li>
+            <li><strong>Excluir cópias na nuvem:</strong> abra a pasta “Planta - Backups” no Google Drive e exclua os arquivos desejados. Para a remoção definitiva, gerencie também a lixeira conforme as regras do Google Drive.</li>
+            <li><strong>Excluir dados locais:</strong> exclua registros pelas funções disponíveis no app ou limpe os dados do Planta nas configurações de armazenamento do Android. Essa ação exige um backup disponível caso queira recuperar os registros depois.</li>
+            <li><strong>Restaurar uma cópia:</strong> baixe o arquivo do Drive e use “Escolher arquivo para restaurar” no Planta, com o mesmo e-mail da conta local original. A restauração exige sua confirmação e pode substituir os dados atuais.</li>
+          </ul>
+          <p>Excluir uma planta ou outro registro local não modifica os backups que já foram exportados. Remova as cópias antigas separadamente se não quiser manter esses registros nelas.</p>
+        </section>
+
+        <section id="site" aria-labelledby="site-titulo">
+          <span class="section-number">05</span><h2 id="site-titulo">Estas páginas de apresentação</h2>
+          <p>Este site é informativo. Ele não solicita login, não recebe backups e não inclui formulários, publicidade, ferramentas próprias de análise de visitantes ou cookies adicionados pelo Planta.</p>
+          <p>A hospedagem é feita no GitHub Pages. O GitHub pode registrar informações técnicas, como o endereço IP de visitantes, para disponibilizar e proteger o serviço, conforme sua <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement">Declaração de Privacidade</a>. Ao abrir links externos, aplicam-se também as práticas dos respectivos serviços.</p>
+        </section>
+
+        <section id="contato" aria-labelledby="contato-titulo">
+          <span class="section-number">06</span><h2 id="contato-titulo">Contato e alterações desta política</h2>
+          <p>Para dúvidas sobre o aplicativo, privacidade ou tratamento dos dados, fale com Andrey pelo e-mail <a href="mailto:andreykoshimizo@gmail.com">andreykoshimizo@gmail.com</a>. Se você enviar uma mensagem, seu endereço e o conteúdo serão utilizados para atender à solicitação. Evite enviar senhas ou backups completos sem necessidade.</p>
+          <p>Esta política será atualizada quando as funções ou o tratamento de dados do Planta mudarem. A data no início da página identifica a versão vigente.</p>
+          <a class="text-link" href="./">Voltar à apresentação do Planta <span aria-hidden="true">↗</span></a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer container"><a class="brand footer-brand" href="./"><img src="assets/planta.png" width="32" height="32" alt=""><span>planta.</span></a><p>Um cuidado de cada vez.</p><a href="privacidade.html" aria-current="page">Política de Privacidade</a><span class="footer-year">© 2026 Planta</span></footer>
+  </body>
+</html>
